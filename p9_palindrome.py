@@ -11,3 +11,5 @@ class Solution:
             i = i+1
         return True
         
+
+        #Work on faster solution*
