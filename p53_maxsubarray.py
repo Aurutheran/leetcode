@@ -7,4 +7,4 @@ class Solution:
             list.append(int(each))
         return max(list)
     
-    #Keep working on this
+    #make it better
