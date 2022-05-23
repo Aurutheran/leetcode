@@ -6,7 +6,7 @@ import random
 import re
 import sys
 
-#
+#Finish the code and make it better
 # Complete the 'lonelyinteger' function below.
 #
 # The function is expected to return an INTEGER.
