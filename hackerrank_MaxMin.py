@@ -17,19 +17,11 @@ import sys
 
 def maxMin(k, arr):
     # Write your code here
-    if not arr:
-        return None
-    if k>len(arr):
-        return None
-    i = 0
-    j = k
-    arr = arr.sort()
-    unfairness = arr[-1]
-    while (j<len(arr)):
-        current = max(arr[i:j])-min(arr[i:j])
-        unfairness = min(current,unfairness)
-        i = i + 1
-        j = j + 1    
+    arr.sort()
+    unfairness = sys.maxsize
+    
+    for i in range(n-k+1):
+        unfairness = min(unfairness,arr[i+k-1] - arr[i])
     return unfairness 
 if __name__ == '__main__':
     fptr = open(os.environ['OUTPUT_PATH'], 'w')
