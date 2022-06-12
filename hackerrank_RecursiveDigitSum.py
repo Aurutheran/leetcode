@@ -17,8 +17,6 @@ import sys
 
 def superDigit(n, k):
     # Write your code here
-    val = str(n)*k
-    
     def recurs(n):
         total = 0
         for each in str(n):
@@ -30,7 +28,7 @@ def superDigit(n, k):
         else:
             return recurs(total)
         
-    inputs = str(n)*k
+    inputs = str(recurs(n))*k
     
     return recurs(inputs)
 if __name__ == '__main__':
