@@ -17,21 +17,22 @@ import sys
 
 def superDigit(n, k):
     # Write your code here
+    val = str(n)*k
     
+    def recurs(n):
+        total = 0
+        for each in str(n):
+            total += int(each)
+        
+        total = str(total)
+        if len(total) == 1:
+            return int(total)
+        else:
+            return recurs(total)
+        
+    inputs = str(n)*k
     
-    if len(str(n)) == 1:
-        return n
-    
-    total = 0
-    
-    for each in str(n):
-        total += int(each)
-    
-    if len(str(total)) == 1:
-        return int(total)
-    
-    superDigit(total,len(str(total)))
-
+    return recurs(inputs)
 if __name__ == '__main__':
     fptr = open(os.environ['OUTPUT_PATH'], 'w')
 
