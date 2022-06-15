@@ -6,6 +6,7 @@ import random
 import re
 import sys
 
+#INCOMPLETE
 #
 # Complete the 'sumXor' function below.
 #
